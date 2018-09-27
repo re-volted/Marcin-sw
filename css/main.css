@@ -690,8 +690,12 @@ footer.container {
 
 /* ------------- MEDIA QUERIES */
 @media only screen and (max-width: 1023px) {
+    .logo__wrapper {
+        width: 70vw;   
+    }
+    
     .logo__wrapper p {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .logo__wrapper p::before {
