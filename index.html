@@ -14,25 +14,40 @@
 </head>
 
 <body>
-    <div class="nav" id="pageTop">
+    <!-- ---------------------------------NAVIGATION -->
+    <nav class="nav" id="pageTop">
         <ul class="nav__ul">
-            <li><a href="#1" class="nav__item">O mnie</a></li>
+            <li><a href="#aboutMe" class="nav__item">O mnie</a></li>
             <li><a href="#Aktualnosci" class="nav__item">Aktualności</a></li>
-            <li><a href="#3" class="nav__item">Streetworkout</a></li>
+            <li><a href="#Streetworkout" class="nav__item">Streetworkout</a></li>
             <li><a href="#4" class="nav__item">Podróże</a></li>
             <li><a href="#contact" class="nav__item">Kontakt</a></li>
         </ul>
-    </div>
+    </nav>
+
+    <!-- ---------------------------------LOGO -->
     <div class="logo__wrapper">
         <img src="./img/logo1.png" alt="logo">
         <p><span>Marcin Kowalczyk</span><br>street workout</p>
     </div>
-    <div class="intro__container">
-        <div class="intro__header" id="Aktualnosci">Aktualności</div>
+
+    <!-- ---------------------------------ABOUT ME -->
+    <div class="container flex-row flex-space-around">
+        <h1 id="aboutMe">O mnie</h1>
+        <div class="aboutMe__text"><span>Cześć!</span><br>Jestem Marcin. Obecnie uczę się w liceum w Białej Podlaskiej. Moją przygodę ze streetworkoutem zacząłem w 2015 roku. Od tamtej pory nieprzerwanie rozwijam się w tej dyscyplinie.<br><br>Moim marzeniem jest wzięcie udziału w Mistrzostwach Polski Juniorów i zajęcie na nich czołowego miejsca.</div>
+        <div class="aboutMe__img"><img src="./img/profile_pic.jpg" alt="profile picture"></div>
+        <!-- go to top -->
+        <div class="goToTop"><a href="#pageTop"><img src="./img/to_the_top.png" alt="do gory strony"></a></div>
+    </div>
+
+
+    <!-- ---------------------------------WHAT'S NEW -->
+    <div class="container flex-row cards">
+        <h1 id="Aktualnosci">Aktualności</h1>
         <div class="intro__card">
             <div class="intro__card__img">
                 <img src="./img/bg_card1.jpg" alt="background photo 1">
-                <div class="intro__card__tags">
+                <div class="tags">
                     <p>fit</p>
                     <p>traveller</p>
                     <p>israel</p>
@@ -48,26 +63,28 @@
 
         <div class="intro__card">
             <div class="intro__card__img">
-                <img src="./img/bg_card2.jpg" alt="background photo 1">
-                <div class="intro__card__tags">
-                    <p>sw</p>
+                <img src="./img/bg_card2.jpg" alt="background photo 2">
+                <div class="tags">
+                    <p>one</p>
+                    <p>arm</p>
+                    <p>pull</p>
+                    <p>up</p>
+                    <p>calisthenics</p>
                     <p>streetworkout</p>
-                    <p>koval_sw</p>
-                    <p>sw</p>
                 </div>
                 <div class="date">
-                    <p>21 padziernika 2018r.</p>
+                    <p>27 września 2018r.</p>
                 </div>
             </div>
             <div class="intro__card__text">
-                <p>Tym razem zabieram was w podróż po mojej zajawce. Streetworkoutem zainteresowałem się 2 lata temu. Jest to wspaniała przygoda, którą kultywuję po dziś dzień. Po więcej informacji na ten temat zapraszam <a href="#6" class="link pointer">&nbsp;tu</a>. </p>
+                <p>Pierwszy poradnik mojego współautorstwa dotyczyć będzie One Arm Pull Up. Jest to zaawansowany element siłowy, wymagający dużej siły pull. Po więcej informacji na ten temat zapraszam <a href="#OAPU" class="link pointer">&nbsp;tu</a>. </p>
             </div>
         </div>
 
         <div class="intro__card">
             <div class="intro__card__img">
-                <img src="./img/bg_card5.jpg" alt="background photo 1">
-                <div class="intro__card__tags">
+                <img src="./img/bg_card5.jpg" alt="background photo 5">
+                <div class="tags">
                     <p>brother</p>
                     <p>travelling</p>
                     <p>israel</p>
@@ -86,8 +103,8 @@
         </div>
         <div class="intro__card">
             <div class="intro__card__img">
-                <img src="./img/bg_card4.jpg" alt="background photo 1">
-                <div class="intro__card__tags">
+                <img src="./img/bg_card4.jpg" alt="background photo 4">
+                <div class="tags">
                     <p>Montenegro</p>
                     <p>wakacje</p>
                     <p>marzeń</p>
@@ -102,54 +119,85 @@
                 <p>Relacja z najnowszej wycieczki do Czarnogóry. Niesamowici ludzie, widoki zapierające dech w piersiach oraz przepyszne jedzenie. To i nie tylko znajdziecie w tym niewielkim kraju położonym w malowniczych Bałkanach. Więcej o kraju czarnego orła<a href="#6" class="link pointer">&nbsp;w tym miejscu</a>. </p>
             </div>
         </div>
-        <div class="intro__card">
-            <div class="intro__card__img">
-                <img src="./img/bg_card1.jpg" alt="background photo 1">
-                <div class="intro__card__tags">
-                    <p>Montenegro</p>
-                    <p>wakacje</p>
-                    <p>marzeń</p>
-                    <p>lakeSkadar</p>
-                    <p>holidays</p>
+
+        <!-- go to top -->
+        <div class="goToTop"><a href="#pageTop"><img src="./img/to_the_top.png" alt="do gory strony"></a></div>
+    </div>
+
+    <!-- ---------------------------------STREETWORKOUT -->
+    <div class="container flex-col">
+        <h1 id="Streetworkout">Streetworkout</h1>
+        <div class="blockquote" style="width: 80%">
+            <p>Jest to część poświęcona moim zainteresowaniom.<br>Będą się tu sukcesywnie pojawiać poradniki, nowości i informacje praktyczne dotyczące streetworkoutu.</p>
+        </div>
+
+
+        <div class="post flex-col" id="OAPU">
+            <h2>ONE ARM PULL UP</h2>
+            <p>Poradnik&nbsp;#1</p>
+            <div class="post__img">
+                <div class="details">
+                    <p>ONE ARM PULL UP</p>
+                    <p>Autorzy: Marcin Kowalczyk, Piotr Sienkiewicz</p>
+                </div>
+                <img src="./img/bg_card2.jpg" alt="background photo 2">
+                <div class="tags">
+                    <p>one</p>
+                    <p>arm</p>
+                    <p>pull</p>
+                    <p>up</p>
+                    <p>calisthenics</p>
+                    <p>streetworkout</p>
                 </div>
                 <div class="date">
-                    <p>21 padziernika 2018r.</p>
+                    <p>27 września 2018r.</p>
                 </div>
             </div>
-            <div class="intro__card__text">
-                <p>Relacja z najnowszej wycieczki do Czarnogóry. Niesamowici ludzie, widoki zapierające dech w piersiach oraz przepyszne jedzenie. To i nie tylko znajdziecie w tym niewielkim kraju położonym w malowniczych Bałkanach. Więcej o kraju czarnego orła<a href="#6" class="link pointer">&nbsp;w tym miejscu</a>. </p>
+            <div class="description">
+                <div class="blockquote">
+                    <p>One arm pull up (podciągnięcie na jednej ręce), w skrócie OAPU, jest zaawansowanym elementem siłowym, wymagającym dużej siły pull. Kluczowe mięśnie biorące udział w ćwiczeniu: Najszerszy, czworoboczny, tylni akton barku, biceps, ramienny, ramienno-promieniowy, klata, zebaty przedni.</p>
+                </div>
+                <h3>TECHNIKA</h3>
+                <ul>
+                    <li>Spięta łopatka.</li>
+                    <li>Brak szarpania, bujania, wszelkiego rodzaju telepania, niezidentyfikowanych ruchów ciałem.</li>
+                    <li>Broda nad drążek.</li>
+                    <li>Neutralna pozycja szyi.</li>
+                </ul>
+                <h3>Nauka OAPu</h3>
+                <p>Naszym celem jest zbudowanie <b>SIŁY</b> do podciągnięcia na jednej ręce, a nie <b>WYTRZYMAŁOŚCI</b> w zwykłych podciągnięciach, więc nie jest obowiązkowe 20-30 podciągnięć, by zacząć przygodę z OAPU.</p>
+                <ol>
+                    <li>Klasyczne podciągnięcia nachwytem - do momentu, aż wykonanie 8-10 podciągnięć nie będzie sprawiało nam trudności.</li>
+                    <li>Spięcia łopatki w zwisie na jednej ręce - (przygotowawczo) przez kilka treningów jako główne ćwiczenie, dalej jako akcesoryjne.</li>
+                    <li>Typewriter pull ups z przytrzymaniem - kilkusekundowe przytrzymanie w kluczowym momencie (jedna ręka prosta). </li>
+                    <li>Archer pull ups - ręka pomocnicza ma być prosta przez cały czas trwania ruchu, można dodać przytrzymanie.</li>
+                    <li>OAPU z gumą - guma powinna być zawieszona w środku ciężkości ciała, czyli dokładnie pod ręką, na której się podciągamy. Drugą ręką łąpiemy gumę mniej więcej w połowie.</li>
+                    <li>Powolne negatywy OAPU.</li>
+                    <li>Negatywy OAPU z zatrzymaniem w najtrudniejszych dla nas momentach (broda nad drążkiem, kąt 90 stopni w łokciu, tuż przed wyprostem ręki).</li>
+                    <li>Jeśli punkt 7 wychodzi nam bez problemu, a wciąż OAPU nie siada, to robimy próby oraz negatywy z zatrzymaniem oraz próbą "powrotu" do góry.</li>
+                </ol>
+                <p>Trening pod OAPU polecamy wykonywać maksymalnie 2-3 razy w tygodniu. Niżej znajdziecie filmik, na którym widnieją wymienione wyżej ćwiczenia.</p>
+                <h3>Warto wykonywać także ćwiczenia pomocnicze w trakcie całej nauki OAPU:</h3>
+                <ul>
+                    <li>Podciąganie z ciężarem (bardzo dobre ćwiczenie budujące naszą siłę pull.<br>Przy odpowiednio dużym 1RM, podciągnięcie na jednej powinno wejść same).</li>
+                    <li>Spięcia łopatki na jednej ręce.</li>
+                </ul>
+                <h3>Bóle:</h3>
+                <ul>
+                    <li>Ból stożka rotatorow od braku spiętych łopatek.</li>
+                    <li>Spięta szyja od ruszania nią podczas ruchu.</li>
+                </ul>
             </div>
+
         </div>
+        <!-- go to top -->
+        <div class="goToTop"><a href="#pageTop"><img src="./img/to_the_top.png" alt="do gory strony"></a></div>
     </div>
 
-    <div class="transparent">
-    </div>
-    <div class="wrapper">
-        <div class="content o_mnie">
-            <p>sw</p>
-            <p>streetworkout</p>
-            <p>koval_sw</p>
-            <p>sw</p>
-            <p>streetworkout</p>
-            <p>koval_sw</p>
-            <p>sw</p>
-            <p>streetworkout</p>
-            <p>koval_sw</p>
-        </div>
-        <div class="content oferta">
-
-        </div>
-        <div class="content doswiadczenie">
-
-        </div>
-        <div class="content kontakt">
-
-        </div>
-    </div>
-
-    <footer id="footer">
-        <div id="googleMap"></div>
-        <div id="footer_image"><img src="./img/bg_card3.jpg" alt="footer image">
+    <!-- ---------------------------------FOOTER -->
+    <footer class="container flex-row">
+        <div id="map"></div>
+        <div id="footer__image"><img src="./img/bg_card3.jpg" alt="footer image">
             <div id="contact">
                 <div>
                     <p><span>Kontakt</span></p>
@@ -158,20 +206,38 @@
                     <p>email: <a href="mailto:leszczeton@gmail.com">leszczeton@gmail.com</a></p>
                 </div>
             </div>
-            <div id="goToTop"><a href="#pageTop"><img src="./img/to_the_top.png" alt="do gory strony"></a></div>
+            <!-- go to top -->
+            <div class="goToTop"><a href="#pageTop"><img src="./img/to_the_top.png" alt="do gory strony"></a></div>
         </div>
         <div id="rights">All rights reserved&reg; 2k18 <span>created by ReVolted</span></div>
     </footer>
 </body>
+
+
+<!-- ---------------------------------map using Google API key -->
 <script type="text/javascript">
-    function myMap() {
+    function initMap() {
+        var home = {
+            lat: 52.039314,
+            lng: 23.107923
+        }
         var mapProp = {
-            center: new google.maps.LatLng(52.039314, 23.107923),
             zoom: 15,
-        };
-        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+            center: home
+        }
+        var map = new google.maps.Map(document.getElementById("map"), mapProp);
+        var marker = new google.maps.Marker({
+            position: home,
+            map: map
+        });
     }
 </script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRYyp8jLKrwMPrd0W6edbPi1A7YXC_Hyo&callback=initMap"></script>
+
+
+
+<!-- ---------------------------------Smooth scroll script -->
 <script type="text/javascript">
     $(function() {
         $('a[href*="#"]:not([href="#])').click(function() {
@@ -188,6 +254,5 @@
         });
     });
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASX6SqtQsOOS3Jat2bvwuSOSX_XoUxHyQ&callback=myMap"></script>
 
 </html>
