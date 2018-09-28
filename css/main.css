@@ -102,6 +102,10 @@ h3 {
     border-bottom: 1px solid var(--mainColor1);
 }
 
+hr {
+    margin: 2rem 0px;
+}
+
 /* --------------- NAV STYLES */
 .nav__ul {
     color: white;
@@ -267,8 +271,16 @@ ul.nav__ul li:hover::before {
 
 .aboutMe__text span {
     display: block;
-    width: 0px;
-    margin-left: 35px;
+    position: relative;
+}
+
+.aboutMe__text span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0px;
     border-bottom: 1px solid black;
     animation-name: aboutMeWidth;
     animation-delay: 2s;
@@ -397,11 +409,13 @@ a.link {
     color: black;
     font-weight: 600;
     text-decoration: none;
+    border-bottom: 1px solid black;
 }
 
 a.link:hover {
     color: white;
     background-color: black;
+    border-bottom: none;
 }
 
 /* ------------- STREETWORKOUT */
@@ -410,15 +424,26 @@ a.link:hover {
     align-items: center;
 }
 
+.text__box {
+    width: 80%;
+    background-color: rgba(0,0,0,0.5);
+    font-size: 110%;
+    font-style: italic;
+    color: white;
+    padding: 2rem;
+    border-right: 3px solid black;
+    text-shadow: 1px 1px 1px #000;
+}
+    
 .post {
     width: 80vw;
     max-width: 100%;
     margin: 125px 0px;
+    padding: 2rem 0px 100px 0px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     background-color: rgba(var(--mainColor1RGB),0.1);
 }
-
 
 .post__img {
     width: 50%;
@@ -540,34 +565,28 @@ a.link:hover {
     padding: 5px;
 }
 
-.description ul li {
+.description ul li, 
+.description ol li {
     list-style: none;
     margin: 5px 0px;
     padding: 5px 0px;
     background-color: rgba(0,0,0,0.1);
 }
 
-.description ul li:hover {
+.description ul li:hover,
+.description ol li:hover{
     font-weight: 600;
     background-color: rgba(0,0,0,0.25);
+    transform: scale(1.05);
 }
 
 .description ol li {
     list-style: upper-roman;
-    margin: 5px 0px;
-    padding: 5px 0px;
-    background-color: rgba(0,0,0,0.1);
 }
 
-.description ol li:hover {
-    font-weight: 600;
-    background-color: rgba(0,0,0,0.25);
-}
 ul, ol:not(+ p) {
     margin-bottom: 100px;    
 }
-
-
 
 
 /* ------------- FOOTER */
@@ -614,7 +633,7 @@ footer.container {
     position: absolute;
     left: 0px;
     top: 0px;
-    height: 30vh;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     display: table;
@@ -690,8 +709,18 @@ footer.container {
 
 /* ------------- MEDIA QUERIES */
 @media only screen and (max-width: 1023px) {
+    html, body {
+        margin: 0px;
+        overflow-x: hidden;
+    }
+    
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
     .logo__wrapper {
-        width: 70vw;   
+        width: 80vw;   
     }
     
     .logo__wrapper p {
@@ -707,14 +736,9 @@ footer.container {
         top: 0.5px;
     }
 
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .aboutMe__img {
-        height: 35vw;
-        transform: translate(0px, 0px);
+        height: 60vw;
+        transform: translateX(0px);
     }
 
     .intro__card {
@@ -730,16 +754,34 @@ footer.container {
     .intro__card:nth-child(odd) {
         border-left: none;
     }
+    
+    .intro__card__img img {
+        left: 50%;
+        top: 0%;
+        transform: translateX(-50%);
+        transition: 1s ease;
+    }
+    
+    .intro__card__img img:hover {
+        transform: scale(1.1) translateX(-50%);
+        top: 0%;
+    }
 
-    .post {
+    .post, .text__box {
         width: 90vw;
     }
-    .post__img {
-        width: 85%;
+      
+    .post__img img {
+        width: auto;
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
     }
     
     #footer__image,
     #map {
+        height: 40vh;
         width: 100vw;
         max-width: 100%;
         border: 2px solid black;
@@ -761,8 +803,54 @@ footer.container {
         height: 35px;
     }
 
+}
+
+@media only screen and (max-width: 1023px) and (orientation: portrait) {
+    html, body {
+        margin: 0px;
+        overflow-x: hidden;
+    }
+    
+    .post {
+        width: 100vw;
+    }
+    
+    .intro__card__img img {
+        height: 100%;
+    }
+
+    .post__img {
+        width: 100%;
+        height: 60vw;
+    }
+      
+    .post__img img {
+        height: 100%;
+    }
+    
 
 
+}
+
+@media only screen and (max-width: 1023px) and (orientation: landscape) {
+
+    .intro__card__img img {
+        width: 100%;
+    }
+    
+    .post__img {
+        width: 85%;
+        height: 30vw;
+    }
+      
+    .post__img img {
+        width: 100%;
+    }
+
+    #footer__image,
+    #map {
+        height: 70vh;
+    }
 }
 
 /* ==========================================================================
@@ -781,11 +869,9 @@ footer.container {
 @keyframes aboutMeWidth {
     0% {
         width: 0%;
-        margin-left: 35px;
     }
 
     100% {
         width: 100%;
-        margin-left: 0px;
     }
 }
